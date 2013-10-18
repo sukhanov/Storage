@@ -1,0 +1,23 @@
+﻿@model Storage.Models.CategoryModels.EditCategoryModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("EditCategory", "Category", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => Model.Id)
+
+    <div>
+        @Html.LabelFor(model => Model.Title)
+        @Html.EditorFor(model => Model.Title)
+        @Html.ValidationMessageFor(model => Model.Title)
+    </div>
+    <div>
+        @Html.LabelFor(model => Model.Description)
+        @Html.TextAreaFor(model => Model.Description)
+    </div>
+    <div>
+        <input type="submit" value="Ok" />
+    </div>
+}

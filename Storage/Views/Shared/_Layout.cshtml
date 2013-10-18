@@ -1,0 +1,28 @@
+﻿@model Storage.Models.LayoutModel
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta property="og:title" content="@Model.PageTitle" />
+    <meta property="og:image" content="@Model.PageImage" />
+    <meta name="title" content="@Model.PageTitle" />
+    <meta name="keywords" content="Склад" />
+    <meta name="description" content="@Model.PageDescription" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>@Model.PageTitle</title>
+    @Html.Partial("_ScriptsPartial")
+    @Html.Partial("_StylesPartial")
+</head>
+<body>
+    <div id="wrapper">
+        <div style="float: right">
+            @Html.Partial("_AutorisePartial")
+        </div>
+        <div style="float: left">
+            @Html.Partial("_MenuPartial")
+        </div>
+        <div style="clear: both;"></div>
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿<div >
+    @if (Request.IsAuthenticated)
+    {
+        <p>
+            Привет, <strong>@User.Identity.Name</strong>
+            (@Html.ActionLink("Выйти", "LogOff", "Account", new { }, new { }))
+        </p>
+    }
+    else
+    {
+        <p>@Html.ActionLink("Войти", "LogOn", "Account", new { }, new { })</p>
+    }
+</div>
+

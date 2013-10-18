@@ -1,0 +1,44 @@
+﻿@model Storage.Models.ProductModels.EditProductModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("EditProduct", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => Model.Id)
+     @Html.HiddenFor(model => Model.ImageId)
+
+    
+    <div>
+        @Html.LabelFor(model => Model.CategoryId)
+        @Html.DropDownListFor(model => Model.CategoryId, Model.Categories)
+        @Html.ValidationMessageFor(model => Model.CategoryId)
+    </div>
+    <div>
+        @Html.LabelFor(model => Model.Title)
+        @Html.EditorFor(model => Model.Title)
+         @Html.ValidationMessageFor(model => Model.Title)
+    </div>
+    <div>
+        @Html.LabelFor(model => Model.Description)
+        @Html.TextAreaFor(model => Model.Description)
+    </div>
+    <div>
+        @Html.LabelFor(model => Model.Price)
+        @Html.EditorFor(model => Model.Price)
+         @Html.ValidationMessageFor(model => Model.Price)
+    </div>
+    <div>
+        @Html.LabelFor(model => Model.Count)
+        @Html.EditorFor(model => Model.Count)
+         @Html.ValidationMessageFor(model => Model.Count)
+    </div>
+    <div>
+        <input type="file" name="Image" />
+    </div>
+   
+    <div>
+        <input type="submit" value="Ok" />
+    </div>
+}

@@ -1,0 +1,65 @@
+﻿@model Storage.Models.CategoryModels.CategoryModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @Html.ActionLink("Add", "AddCategory", "Category", new { }, new { })
+
+    <table id="category-table" class="table table-striped">
+        <tr>
+            <td class="category-title">Название
+            </td>
+            <td class="category-count">Количество товаров
+            </td>
+            <td class="category-description">Описание
+            </td>
+            @if (Model.EditingMode)
+            {
+                <td class="category-action">Действие
+                </td>  
+            }
+        </tr>
+
+        @foreach (var category in Model.Categories)
+        {
+            <tr>
+                <td class="category-title">@category.Title
+                </td>
+                <td class="category-count">@category.Product.Count
+                </td>
+                <td class="category-description">@category.GetDescription(Model.EditingMode)
+                </td>
+                @if (Model.EditingMode)
+                {
+                    <td class="category-action">
+                        @Html.ActionLink("Edit", "EditCategory", "Category", new { category.Id }, new { })
+                        @Html.ActionLink("Delete", "DeleteCategory", "Category", new { category.Id }, new { onClick = "return confirm('Удалить?');" })
+                    </td>  
+                }
+            </tr>
+        }
+    </table>
+</div>
+
+<style>
+    #category-table {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .category-title {
+        width: 25%;
+    }
+
+    .category-count {
+        width: 5%;
+    }
+
+    .category-description {
+    }
+
+    .category-action {
+        width: 25%;
+    }
+</style>

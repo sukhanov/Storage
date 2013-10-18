@@ -1,0 +1,147 @@
+﻿@using Shared
+@using Storage.Code
+@model Storage.Models.ProductModels.ProductModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    @Html.ActionLink("Add", "AddProduct", "Product", new { }, new { })
+
+    @Html.DropDownList("Id", Model.Categories, new { onchange = "CategorySelect()", id = "categories-drop-down-list" })
+        <table id="product-table" class="table table-striped">
+            <tr>
+                <th class="product-category">Категория</th>
+                <th class="product-image">Изображение</th>
+                <th class="product-title">
+                    @Html.ActionLink(string.Format("Название {0}", Model.GetOrderSymbol("Title")), "Index", "Product", new { sortColumn = "Title", sortOrder = Model.GetNewOrder("Title") }, new { })
+                </th>
+                <th class="product-description">Описание</th>
+                <th class="product-price">
+                    @Html.ActionLink(string.Format("Цена {0}", Model.GetOrderSymbol("Price")), "Index", "Product", new { sortColumn = "Price", sortOrder = Model.GetNewOrder("Price") }, new { })
+                </th>
+                <th class="product-count">
+                    @Html.ActionLink(string.Format("Количество {0}", Model.GetOrderSymbol("Count")), "Index", "Product", new { sortColumn = "Count", sortOrder = Model.GetNewOrder("Count") }, new { })
+                </th>
+
+                @if (Model.EditingMode)
+                {
+                    <td class="product-action">Действие</td>  
+                }
+            </tr>
+
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td class="product-category">@product.Category.Title
+                    </td>
+                    @if (product.ImageId != null)
+                    {
+                        <td class="product-image">
+                            <img src="@Url.Action("GetImage", "Home", new { id = product.ImageId })" alt="@product.Title"/>
+                        </td>
+                    }
+                    else
+                    {
+                        <td class="product-image">нету</td>
+                    }
+                    <td class="product-title">@product.Title
+                    </td>
+                    <td class="product-description">@product.GetDescription(Model.EditingMode)
+                    </td>
+                    <td class="product-price text-center">@product.Price
+                    </td>
+                    <td class="product-count text-center">@product.Count
+                    </td>
+
+                    @if (Model.EditingMode)
+                    {   
+                        <td class="product-action">
+                            @Html.ActionLink("Edit", "EditProduct", "Product", new { product.Id }, new { })
+                            @Html.ActionLink("Delete", "DeleteProduct", "Product", new { product.Id }, new { onClick = "return confirm('Удалить?');" })
+                        </td>  
+                    }
+                </tr>
+            }
+        </table>
+    </div>
+    @if (Model.DisplayPager)
+    {
+        <div class="centered">
+            @Html.Pager(Model, "Page")
+        </div>
+    }
+
+
+
+
+<style>
+    .text-center {
+        text-align: center;
+    }
+
+    #product-table {
+        width: 90%;
+        margin: 0 auto;
+        /*border: 1px solid black;*/
+    }
+
+    .product-category {
+        width: 15%;
+        /*border: 1px solid black;*/
+    }
+
+    .product-image {
+        width: 15%;
+        /*border: 1px solid black;*/
+    }
+
+        .product-image img {
+            width: 90%;
+        }
+
+    .product-title {
+        width: 15%;
+        /*border: 1px solid black;*/
+    }
+
+    .product-count {
+        width: 5%;
+        /*border: 1px solid black;*/
+    }
+
+    .product-price {
+        width: 5%;
+        /*border: 1px solid black;*/
+    }
+
+    .product-description {
+        /*border: 1px solid black;*/
+    }
+
+    .product-action {
+        width: 15%;
+        /*border: 1px solid black;*/
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+   </style>
+
+<script>
+    CategorySelect = function () {
+        var select = document.getElementById("categories-drop-down-list").value;
+        $.ajax({
+            type: "GET",
+            cache: false,
+            url: "/Product/Index?categoryFilter=" + select,
+            data: null,
+            success: function (data) {
+                h = document.getElementsByTagName('html')[0];
+                h.innerHTML = data;
+            }
+        });
+    };
+</script>
