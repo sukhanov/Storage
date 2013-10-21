@@ -39,7 +39,6 @@
 
         public void EditCategory(Category category)
         {
-           // _db.Category.Attach(category);
             _db.ObjectStateManager.ChangeObjectState(category, EntityState.Modified);
             _db.SaveChanges();
         }

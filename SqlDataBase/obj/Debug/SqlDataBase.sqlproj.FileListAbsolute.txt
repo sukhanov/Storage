@@ -1,0 +1,9 @@
+D:\Проекты\Storage\SqlDataBase\bin\Debug\SqlDataBase.dacpac
+D:\Проекты\Storage\SqlDataBase\bin\Debug\SqlDataBase.dll
+D:\Проекты\Storage\SqlDataBase\bin\Debug\SqlDataBase.pdb
+D:\Проекты\Storage\SqlDataBase\obj\Debug\Model.xml
+D:\Проекты\Storage\SqlDataBase\obj\Debug\refactor.xml
+D:\Проекты\Storage\SqlDataBase\obj\Debug\postdeploy.sql
+D:\Проекты\Storage\SqlDataBase\obj\Debug\predeploy.sql
+D:\Проекты\Storage\SqlDataBase\obj\Debug\SqlDataBase.dll
+D:\Проекты\Storage\SqlDataBase\obj\Debug\SqlDataBase.pdb

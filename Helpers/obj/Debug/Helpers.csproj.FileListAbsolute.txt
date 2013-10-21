@@ -1,0 +1,4 @@
+D:\Проекты\Storage\Helpers\bin\Debug\Helpers.dll
+D:\Проекты\Storage\Helpers\bin\Debug\Helpers.pdb
+D:\Проекты\Storage\Helpers\obj\Debug\Helpers.dll
+D:\Проекты\Storage\Helpers\obj\Debug\Helpers.pdb

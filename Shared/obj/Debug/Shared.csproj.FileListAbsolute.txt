@@ -1,0 +1,5 @@
+D:\Проекты\Storage\Shared\bin\Debug\Shared.dll
+D:\Проекты\Storage\Shared\bin\Debug\Shared.pdb
+D:\Проекты\Storage\Shared\obj\Debug\Shared.dll
+D:\Проекты\Storage\Shared\obj\Debug\Shared.pdb
+D:\Проекты\Storage\Shared\obj\Debug\Shared.csprojResolveAssemblyReference.cache

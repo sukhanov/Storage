@@ -20,7 +20,6 @@
 
         public void EditImage(Image image)
         {
-            // _db.Category.Attach(category);
             _db.ObjectStateManager.ChangeObjectState(image, EntityState.Modified);
             _db.SaveChanges();
         }

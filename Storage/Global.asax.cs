@@ -29,18 +29,18 @@ namespace Storage
             MapperConfig.RegisterMappers();
         }
 
-        protected void Application_Error(object sender, EventArgs e)
-        {
-            var ex = Server.GetLastError();
-            if (ex.InnerException != null)
-            {
-                ex = ex.InnerException;
-            }
+        //protected void Application_Error(object sender, EventArgs e)
+        //{
+        //    var ex = Server.GetLastError();
+        //    if (ex.InnerException != null)
+        //    {
+        //        ex = ex.InnerException;
+        //    }
 
-            Log.Error(ex.Message);
+        //    Log.Error(ex.Message);
 
-            Response.Clear();
-            Server.ClearError();
-        }
+        //    Response.Clear();
+        //    Server.ClearError();
+        //}
     }
 }

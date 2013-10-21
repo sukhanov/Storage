@@ -1,0 +1,11 @@
+D:\Проекты\Storage\Repository\bin\Debug\Repository.dll
+D:\Проекты\Storage\Repository\bin\Debug\Repository.pdb
+D:\Проекты\Storage\Repository\bin\Debug\DomainObject.dll
+D:\Проекты\Storage\Repository\bin\Debug\Shared.dll
+D:\Проекты\Storage\Repository\bin\Debug\DomainObject.pdb
+D:\Проекты\Storage\Repository\bin\Debug\Shared.pdb
+D:\Проекты\Storage\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+D:\Проекты\Storage\Repository\obj\Debug\Repository.dll
+D:\Проекты\Storage\Repository\obj\Debug\Repository.pdb
+D:\Проекты\Storage\Repository\bin\Debug\NLog.dll
+D:\Проекты\Storage\Repository\bin\Debug\NLog.xml

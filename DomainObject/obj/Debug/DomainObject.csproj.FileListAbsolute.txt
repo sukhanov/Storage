@@ -1,0 +1,8 @@
+D:\Проекты\Storage\DomainObject\bin\Debug\DomainObject.dll.config
+D:\Проекты\Storage\DomainObject\bin\Debug\DomainObject.dll
+D:\Проекты\Storage\DomainObject\bin\Debug\DomainObject.pdb
+D:\Проекты\Storage\DomainObject\bin\Debug\EntityFramework.dll
+D:\Проекты\Storage\DomainObject\bin\Debug\EntityFramework.xml
+D:\Проекты\Storage\DomainObject\obj\Debug\DomainObject.dll
+D:\Проекты\Storage\DomainObject\obj\Debug\DomainObject.pdb
+D:\Проекты\Storage\DomainObject\obj\Debug\DomainObject.csprojResolveAssemblyReference.cache

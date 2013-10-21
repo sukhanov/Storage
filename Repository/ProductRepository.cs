@@ -39,7 +39,6 @@
 
         public void EditProduct(Product product)
         {
-            // _db.Category.Attach(category);
             _db.ObjectStateManager.ChangeObjectState(product, EntityState.Modified);
             _db.SaveChanges();
         }

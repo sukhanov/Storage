@@ -22,8 +22,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 Data", "2 Data", "{78A420
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{7CE09EA6-D68C-444C-B487-02ABC58CA9D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers.csproj", "{5CC56A7A-8A7B-4595-8B4C-718448EFF3B2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DB90E108-56AD-452D-BAC5-AA7B705235D7}"
 	ProjectSection(SolutionItems) = preProject
 		Немножко осталось.txt = Немножко осталось.txt
@@ -37,7 +35,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csp
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
+		SccNumberOfProjects = 6
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://sukhanov.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -53,18 +51,14 @@ Global
 		SccProjectTopLevelParentUniqueName3 = Storage.sln
 		SccProjectName3 = Repository
 		SccLocalPath3 = Repository
-		SccProjectUniqueName4 = Helpers\\Helpers.csproj
+		SccProjectUniqueName4 = SqlDataBase\\SqlDataBase.sqlproj
 		SccProjectTopLevelParentUniqueName4 = Storage.sln
-		SccProjectName4 = Helpers
-		SccLocalPath4 = Helpers
-		SccProjectUniqueName5 = SqlDataBase\\SqlDataBase.sqlproj
+		SccProjectName4 = SqlDataBase
+		SccLocalPath4 = SqlDataBase
+		SccProjectUniqueName5 = Shared\\Shared.csproj
 		SccProjectTopLevelParentUniqueName5 = Storage.sln
-		SccProjectName5 = SqlDataBase
-		SccLocalPath5 = SqlDataBase
-		SccProjectUniqueName6 = Shared\\Shared.csproj
-		SccProjectTopLevelParentUniqueName6 = Storage.sln
-		SccProjectName6 = Shared
-		SccLocalPath6 = Shared
+		SccProjectName5 = Shared
+		SccLocalPath5 = Shared
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,10 +77,6 @@ Global
 		{7CE09EA6-D68C-444C-B487-02ABC58CA9D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CE09EA6-D68C-444C-B487-02ABC58CA9D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CE09EA6-D68C-444C-B487-02ABC58CA9D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5CC56A7A-8A7B-4595-8B4C-718448EFF3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CC56A7A-8A7B-4595-8B4C-718448EFF3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CC56A7A-8A7B-4595-8B4C-718448EFF3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CC56A7A-8A7B-4595-8B4C-718448EFF3B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{01915DDB-B1F3-449F-8CCF-3FD3A53D9EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{01915DDB-B1F3-449F-8CCF-3FD3A53D9EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01915DDB-B1F3-449F-8CCF-3FD3A53D9EB0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -103,7 +93,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B449AC8E-8F2D-4936-A787-9F1811987F86} = {342C3690-C716-4853-B005-3C3CE848237F}
-		{5CC56A7A-8A7B-4595-8B4C-718448EFF3B2} = {71446EA9-646A-4224-A6FE-DA0B347CF7E6}
 		{43A61562-BA91-4772-B802-E1307E15C029} = {71446EA9-646A-4224-A6FE-DA0B347CF7E6}
 		{E42313D4-57C0-4780-B362-4D4F4FF844E0} = {6AA15773-6202-4E06-A82D-645AA8922ABD}
 		{7CE09EA6-D68C-444C-B487-02ABC58CA9D4} = {78A42011-978D-470E-AB93-88CD9BAEE584}
